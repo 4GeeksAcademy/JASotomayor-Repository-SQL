@@ -24,18 +24,7 @@ CREATE TABLE species (
 );
 
 -- Observations table
-CREATE TABLE observations (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    species_id INTEGER,
-    region_id INTEGER,
-    observer TEXT,
-    observation_date DATE,
-    latitude REAL,
-    longitude REAL,
-    count INTEGER,
-    FOREIGN KEY (species_id) REFERENCES species(id),
-    FOREIGN KEY (region_id) REFERENCES regions(id)
-);
+
 
 -- Climate table (generic structure)
 CREATE TABLE climate (
